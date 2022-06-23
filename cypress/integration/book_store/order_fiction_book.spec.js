@@ -7,7 +7,8 @@ testData.forEach((testCase) => {
             cy.visit(baseUrl);
             cy.fixture('locators').as('locator');
         })
-    
+        
+        /** This fails for $35.80 as the price field accepts only whole numbers */
         it("Order "+`${testCase.book_name}` + " in fiction books for " + `${testCase.price}`, () => {
             cy.get('@locator').then((locator) => {
                 cy.OrderBook(`${testCase.book_name}`, `${testCase.units}`, `${testCase.price}`);

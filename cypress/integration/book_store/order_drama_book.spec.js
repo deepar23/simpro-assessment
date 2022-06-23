@@ -8,7 +8,10 @@ testData.forEach((testCase) => {
             cy.visit(baseUrl);
             cy.fixture('locators').as('locator');
         })
-      
+        
+        /*** This fails for $126 as the user should be able to 
+         * order a drama called “The Rainbow” for no more than $125.00. Here, user ia able to roder 
+         * the book for more than $126 and hence I fail the test ***/ 
         it("Order "+`${testCase.book_name}` + " in drama for " + `${testCase.price}`, () => {
             cy.get('@locator').then((locator) => {
                 cy.OrderBookWithDiscount(`${testCase.book_name}`, `${testCase.units}`, `${testCase.price}`, `${testCase.discount}`);
