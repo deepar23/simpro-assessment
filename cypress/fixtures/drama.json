@@ -1,0 +1,16 @@
+[
+    {
+        "book_name": "The Rainbow",
+        "units": 1,
+        "price": 126,
+        "discount": 10,
+        "result": "fail"
+    },
+    {
+        "book_name": "The Rainbow",
+        "units": 1,
+        "price": 125,
+        "discount": 10,
+        "result": "pass"
+    }
+]

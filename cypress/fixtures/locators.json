@@ -1,0 +1,19 @@
+{
+    "book": ".bookoptions",
+    "drama": "input[value='Drama']",
+    "fiction": "input[value='Fiction']",
+    "unit": "input[name='units']",
+    "price": "input[name='price']",
+    "discount":"input[name='discount']",
+    "discountPercent": "input[name='discountvalue']",
+    "submit": "input[type='submit']",
+    "bookName": "td:nth-child(2)",
+    "bookUnit": "td:nth-child(3)",
+    "bookPrice": "td:nth-child(4)",
+    "totalPrice": "td:nth-child(5)",
+    "discountPrice": "td:nth-child(6)",
+    "finalPrice": "td:nth-child(7)",
+    "delete": ".removeRecord",
+    "confirmDelete": "Yes, Delete it!",
+    "order": "#transactionsection tr"
+}

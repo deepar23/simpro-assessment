@@ -1,0 +1,14 @@
+[
+    {
+        "book_name": "Harry Potter",
+        "units": 50,
+        "price": 35.80,
+        "discount": 0
+    },
+    {
+        "book_name": "Harry Potter",
+        "units": 50,
+        "price": 35,
+        "discount": 0
+    }
+]

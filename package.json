@@ -1,0 +1,27 @@
+{
+  "name": "onlinebookstore",
+  "version": "1.0.0",
+  "description": "end to end tests for online book store app",
+  "main": "index.js",
+  "scripts": {
+    "delete:reportFolder": "del /q cypress\\reports",
+    "delete:reportFolder:linux": "rm -rf cypress/reports",
+    "test:order": "npx cypress run",
+    "test:cli:windows": "npm run delete:reportFolder && npm run test:order",
+    "test:cli:linux:mac": "npm run delete:reportFolder:linux && npm run test:order",
+    "merge:reports": "mochawesome-merge cypress/reports/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
+  },
+  "author": "Deepa Ramachandran",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.6.1",
+    "npx": "^10.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

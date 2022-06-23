@@ -1,0 +1,10 @@
+{
+    "baseUrl":"https://react.simprocloud.com/build/index.html",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}

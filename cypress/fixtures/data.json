@@ -1,0 +1,8 @@
+{
+    "fiction": {
+        "book_name": "Harry Potter",
+        "units": 10,
+        "price": 35.80,
+        "discount": 0
+    }
+}

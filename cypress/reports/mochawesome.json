@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-06-23T12:53:26.909Z",
+    "end": "2022-06-23T12:53:40.825Z",
+    "duration": 13916,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac59e58e-f83a-41e2-8425-e09b56d7b5e9",
+      "title": "",
+      "fullFile": "cypress/integration/book_store/order_drama_book.spec.js",
+      "file": "cypress/integration/book_store/order_drama_book.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f904b5c6-c7bf-4870-ab48-ae4c085bd83b",
+          "title": "Order Drama book",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Order The Rainbow in drama for 126",
+              "fullTitle": "Order Drama book Order The Rainbow in drama for 126",
+              "timedOut": null,
+              "duration": 9846,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@locator').then(locator => {\n  cy.OrderBookWithDiscount(`${testCase.book_name}`, `${testCase.units}`, `${testCase.price}`, `${testCase.discount}`);\n  if (`${testCase.result}` === 'fail') {\n    cy.get(locator.bookName).should('not.exist');\n  }\n  cy.checkOrder(locator.bookName, `${testCase.book_name}`);\n  cy.checkOrder(locator.bookUnit, `${testCase.units}`);\n  cy.checkPrices(locator.bookPrice, `${testCase.price}`);\n  let price = `${testCase.price}` * `${testCase.units}`;\n  cy.checkPrices(locator.totalPrice, price);\n  let discount_price = price * (`${testCase.discount}` / 100);\n  cy.checkPrices(locator.discountPrice, discount_price.toFixed(2));\n  let total_price = price - discount_price;\n  cy.checkPrices(locator.finalPrice, total_price.toFixed(2));\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected <td> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected <td> not to exist in the DOM, but it was continuously found.\n    at Context.eval (https://react.simprocloud.com/__cypress/tests?p=cypress\\integration\\book_store\\order_drama_book.spec.js:125:36)",
+                "diff": null
+              },
+              "uuid": "2524ac3c-6502-46a9-b2c2-541b4a1d4e62",
+              "parentUUID": "f904b5c6-c7bf-4870-ab48-ae4c085bd83b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete record",
+              "fullTitle": "Order Drama book Delete record",
+              "timedOut": null,
+              "duration": 324,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.deleteAnOrder();",
+              "err": {},
+              "uuid": "9fe1a9f4-c6f6-41b2-bbcf-59f834514f0b",
+              "parentUUID": "f904b5c6-c7bf-4870-ab48-ae4c085bd83b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fe1a9f4-c6f6-41b2-bbcf-59f834514f0b"
+          ],
+          "failures": [
+            "2524ac3c-6502-46a9-b2c2-541b4a1d4e62"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10170,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "83f44748-cf33-4755-a2ef-f020d6003418",
+          "title": "Order Drama book",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Order The Rainbow in drama for 125",
+              "fullTitle": "Order Drama book Order The Rainbow in drama for 125",
+              "timedOut": null,
+              "duration": 3284,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@locator').then(locator => {\n  cy.OrderBookWithDiscount(`${testCase.book_name}`, `${testCase.units}`, `${testCase.price}`, `${testCase.discount}`);\n  if (`${testCase.result}` === 'fail') {\n    cy.get(locator.bookName).should('not.exist');\n  }\n  cy.checkOrder(locator.bookName, `${testCase.book_name}`);\n  cy.checkOrder(locator.bookUnit, `${testCase.units}`);\n  cy.checkPrices(locator.bookPrice, `${testCase.price}`);\n  let price = `${testCase.price}` * `${testCase.units}`;\n  cy.checkPrices(locator.totalPrice, price);\n  let discount_price = price * (`${testCase.discount}` / 100);\n  cy.checkPrices(locator.discountPrice, discount_price.toFixed(2));\n  let total_price = price - discount_price;\n  cy.checkPrices(locator.finalPrice, total_price.toFixed(2));\n});",
+              "err": {},
+              "uuid": "e7fb1625-fd50-43cd-b4df-a7f228d9cf0c",
+              "parentUUID": "83f44748-cf33-4755-a2ef-f020d6003418",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete record",
+              "fullTitle": "Order Drama book Delete record",
+              "timedOut": null,
+              "duration": 270,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.deleteAnOrder();",
+              "err": {},
+              "uuid": "7ec97616-2683-43be-a4e5-81794243eb01",
+              "parentUUID": "83f44748-cf33-4755-a2ef-f020d6003418",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e7fb1625-fd50-43cd-b4df-a7f228d9cf0c",
+            "7ec97616-2683-43be-a4e5-81794243eb01"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3554,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
