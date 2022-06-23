@@ -46,6 +46,10 @@ before(() => {
             cy.get(locator.submit).click();
         })
 
+        Cypress.Commands.add("checkOrderPlaced", (name) => {
+            cy.get(name).should('be.visible');
+        })
+
         Cypress.Commands.add("checkOrder", (name, value) => {
             cy.get(name).then(elem => {
                 expect(elem.text()).to.eq(value);
